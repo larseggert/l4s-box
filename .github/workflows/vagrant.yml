@@ -19,7 +19,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install
+      - name: Install vagrant
         run: |
           sudo apt-get -y update
           sudo apt-get install -y vagrant
+
+      - name: Build vagrant box
+        run: |
+          vagrant up
+          vagrant package
