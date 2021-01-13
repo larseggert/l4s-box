@@ -1,0 +1,28 @@
+---
+name: vagrant-box
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  vagrant-box:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        run: vagrant up
+
+      - name: Package
+        run: vagrant package --output l4s.box default
+
+      - name: Export artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: l4s.box
+          path: l4s.box
