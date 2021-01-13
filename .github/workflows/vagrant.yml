@@ -22,9 +22,9 @@ jobs:
       - name: Install vagrant
         run: |
           sudo apt-get -y update
-          sudo apt-get install -y vagrant
+          sudo apt-get install -y vagrant virtualbox
 
       - name: Build vagrant box
         run: |
-          vagrant up
-          vagrant package
+          vagrant up --provider virtualbox
+          vagrant package --provider virtualbox
