@@ -1,7 +1,7 @@
 # L4S Box for Vagrant
 
 This repo contains the `Vagrantfile` for a [Vagrant](https://www.vagrantup.com/)
-box (in [Virtualbox](https://www.virtualbox.org/)) format) that runs an
+box (in [Virtualbox](https://www.virtualbox.org/) format) that runs an
 [L4S](https://l4steam.github.io/)-enabled kernel that uses the [TCP
 Prague](https://netdevconf.info/0x13/session.html?talk-tcp-prague-l4s)
 congestion controller by default. [Mininet](http://mininet.org/) is also
