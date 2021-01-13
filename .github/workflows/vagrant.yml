@@ -3,7 +3,9 @@ name: vagrant-box
 
 on:
   push:
-    branches: [main, ci]
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
