@@ -4,12 +4,10 @@ name: vagrant-box
 on:
   push:
     branches: [main, ci]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  build-box:
+  vagrant-box:
     runs-on: macos-latest
 
     steps:
@@ -24,4 +22,5 @@ jobs:
       - name: Export artifact
         uses: actions/upload-artifact@v2
         with:
+          name: l4s.box
           path: l4s.box
