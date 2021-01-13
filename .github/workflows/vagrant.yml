@@ -18,4 +18,4 @@ jobs:
 
       - name: Install
         run: |
-          apt-get install vagrant
+          sudo apt-get install vagrant
