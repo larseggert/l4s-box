@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
     apt-get -y update
     apt-get -y upgrade
     apt-get install -y htop mininet libmnl-dev libdb-dev unzip
+    apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils
     apt-get install -y fish ripgrep
 
     # change shell to fish
