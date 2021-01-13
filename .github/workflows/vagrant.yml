@@ -15,8 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build vagrant box
+      - name: Build
         run: vagrant up
 
-      - name: Package vagrant box
-        run: vagrant package default
+      - name: Package
+        run: vagrant package --output l4s.box default
+
+      - name: Export artifact
+        uses: actions/upload-artifact@v2
+        with:
+          path: l4s.box
