@@ -15,11 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install vagrant
-        run: |
-          brew install vagrant virtualbox
-
       - name: Build vagrant box
-        run: |
-          vagrant up --provider virtualbox
-          vagrant package --provider virtualbox
+        run: vagrant up
+
+      - name: Package vagrant box
+        run: vagrant package default
